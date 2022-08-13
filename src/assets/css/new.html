@@ -1,0 +1,199 @@
+<template>
+<div class="screen-container">
+  <div class="screen-head show-time"></div>
+  <div class="screen-body">
+    <div class="body-left">
+      <div id="left-top" :class="[fullScreenStatus.jpph? 'fullscreen' : '']">
+        <jpph ref="jpph"></jpph>
+        <div class="resize">
+          <span  :class="['iconfont', fullScreenStatus.jpph ? 'icon-quanpingsuoxiao' : 'icon-fullScreen']" @click="changSize('jpph')"></span>
+        </div>
+      </div>
+    <div id="left-bottom" :class="[fullScreenStatus.mn? 'fullscreen' : '']">
+      <mn ref="mn"></mn>
+      <div class="resize">
+        <span  :class="['iconfont', fullScreenStatus.mn ? 'icon-quanpingsuoxiao' : 'icon-fullScreen']" @click="changSize('mn')"></span>
+      </div>
+    </div>
+    </div>
+    <div class="body-middle">
+      <div id="middle-top"></div>
+      <div id="middle-bottom">
+        <div class="num-2">
+          <div class="num2">
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/01.jpg" style="width: 100%; height: 100%;"> <img src="https://www.beijing2022.cn/cn/olympics/short_track_speed_skating.htm" alt=""> </div>
+              <div class="backE1"><p></p>短道速滑</div>
+            </div>
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/02.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/speed_skating.htm" alt=""></div>
+              <div class="back"><p></p>速度滑冰</div>
+            </div>
+          </div>
+          <div class="num2">
+            <div class="num_2"></div>
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/03.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/figure_skating.htm" alt=""></div>
+              <div class="backE2"><p></p>花样滑冰</div>
+            </div>
+          </div>
+          <div class="num2">
+            <div class="num_2 donghua02">
+              <div class="front"><img src="/static/img/04.jpg" style="width: 100%; height: 100%;"></div>
+              <div class="backE1"></div>
+            </div>
+            <div class="num_2"></div>
+          </div>
+          <div class="num2">
+            <div class="num_2 donghua02">
+              <div class="front"><img src="/static/img/05.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/ice_hockey.htm" alt=""></div>
+              <div class="back"><p></p>冰球</div>
+            </div>
+            <div class="num_2 donghua03">
+              <div class="front"><img src="/static/img/06.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/curling.htm" alt=""></div>
+              <div class="backE2"><p></p>冰壶</div>
+            </div>
+          </div>
+        </div>
+        <div class="num-0">
+          <div class="num0">
+            <div class="num_0 donghua04">
+              <div class="front00"><img src="/static/img/11.jpg" style="width: 100%; height: 100%; bac"><img src="https://www.beijing2022.cn/cn/olympics/alphine_skiing.htm" ></div>
+              <div class="backO1"><p></p>高山滑雪</div>
+            </div>
+            <div class="num_0 donghua05">
+              <div class="front00"><img src="/static/img/12.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/ski_jumping.htm" alt=""></div>
+              <div class="backO2"><p></p>跳台滑雪</div>
+            </div>
+            <div class="num_0 donghua06">
+              <div class="front00"><img src="/static/img/13.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/cross_country_skiing.htm" alt=""></div>
+              <div class="backO1"><p></p>越野滑雪</div>
+            </div>
+          </div>
+          <div class="num0">
+            <div class="num_0 donghua04">
+              <div class="front00"><img src="/static/img/14.jpg" style="width: 100%; height: 100%;"></div>
+              <div class="backO2"><p></p></div>
+            </div>
+            <div class="num_0"></div>
+            <div class="num_0 donghua06">
+              <div class="front00"><img src="/static/img/15.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/nordic_combined.htm" alt=""></div>
+              <div class="back00"><p></p>北欧两项</div>
+            </div>
+          </div>
+          <div class="num0">
+            <div class="num_0 donghua06">
+              <div class="front00"><img src="/static/img/16.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/freestyle_aerials.htm" alt=""></div>
+              <div class="backO2"><p></p>自由式滑雪空中技巧</div>
+            </div>
+            <div class="num_0"></div>
+            <div class="num_0 donghua04">
+              <div class="front00"><img src="/static/img/17.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/freestyle_moguls.htm" alt=""></div>
+              <div class="backO1"><p></p>自由式滑雪雪山技巧</div>
+            </div>
+          </div>
+          <div class="num0">
+            <div class="num_0 donghua06">
+              <div class="front00"><img src="/static/img/18.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/freestyle_ski_cross.htm" alt=""></div>
+              <div class="backO1"><p></p>自由式滑雪障碍追逐</div>
+            </div>
+            <div class="num_0 donghua05">
+              <div class="front00"><img src="/static/img/19.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/freeski_slopestyle.htm" alt=""></div>
+              <div class="backO2"><p></p>自由式滑雪坡面障碍技巧</div>
+            </div>
+            <div class="num_0 donghua04">
+              <div class="front00"><img src="/static/img/20.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/freeski_halfpipe.htm" alt=""></div>
+              <div class="back00"><p></p>自由式滑雪U型场地技巧</div>
+            </div>
+          </div>
+        </div>
+        <div class="num-2">
+          <div class="num2">
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/31.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/freeski_big_air.htm" alt=""></div>
+              <div class="back"><p></p>自由式滑雪大跳台</div>
+            </div>
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/32.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/snowboard_parallel_giant_slalom.htm" alt=""></div>
+              <div class="backE2"><p></p>单板滑行平行大旋转</div>
+            </div>
+          </div>
+          <div class="num2">
+            <div class="num_2"></div>
+            <div class="num_2 donghua02">
+              <div class="front"><img src="/static/img/33.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/snowboard_cross.htm" alt=""></div>
+              <div class="backE1"><p></p>单板滑雪障碍追逐</div>
+            </div>
+          </div>
+          <div class="num2">
+            <div class="num_2 donghua03">
+              <div class="front"><img src="/static/img/34.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/snowboard_slopestyle.htm" alt=""></div>
+              <div class="back"><p></p></div>
+            </div>
+            <div class="num_2"></div>
+          </div>
+          <div class="num2">
+            <div class="num_2 donghua03">
+              <div class="front"><img src="/static/img/35.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/snowboard_slopestyle.htm" alt=""></div>
+              <div class="backE1"><p></p>单板滑雪坡面障碍技巧</div>
+            </div>
+            <div class="num_2 donghua03">
+              <div class="front"><img src="/static/img/36.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/snowboard_halfpipe.htm" alt=""></div>
+              <div class="back"><p></p>单板滑雪U型场地技巧</div>
+            </div>
+          </div>
+        </div>
+        <div class="num-2">
+          <div class="num2">
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/41.jpg" style="width: 100%; height: 100%;"></div>
+              <div class="back"><p></p></div>
+            </div>
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/42.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/snowboard_big_air.htm" alt=""></div>
+              <div class="back"><p></p>单板滑雪大跳台</div>
+            </div>
+          </div>
+          <div class="num2">
+            <div class="num_2"></div>
+            <div class="num_2 donghua01">
+              <div class="front"><img src="/static/img/43.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/bobsleigh.htm" alt=""></div>
+              <div class="backE1"><p></p>雪车</div>
+            </div>
+          </div>
+          <div class="num2">
+            <div class="num_2 donghua02">
+              <div class="front"><img src="/static/img/44.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/skeleton.htm" alt=""></div>
+              <div class="backE1"><p></p>钢架雪车</div>
+            </div>
+            <div class="num_2"></div>
+          </div>
+          <div class="num2">
+            <div class="num_2 donghua02">
+              <div class="front"><img src="/static/img/45.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/luge.htm" alt=""></div>
+              <div class="back"><p></p>雪橇</div>
+            </div>
+            <div class="num_2 donghua03">
+              <div class="front"><img src="/static/img/46.jpg" style="width: 100%; height: 100%;"><img src="https://www.beijing2022.cn/cn/olympics/biathlon.htm" alt=""></div>
+              <div class="backE2"><p></p>冬季两项</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body-right">
+      <div id="right-top" :class="[fullScreenStatus.pe? 'fullscreen' : '']">
+        <pe ref="pe"></pe>
+        <div class="resize">
+          <span  :class="['iconfont', fullScreenStatus.pe ? 'icon-quanpingsuoxiao' : 'icon-fullScreen']" @click="changSize('pe')"></span>
+        </div>
+      </div>
+      <div id="right-bottom" :class="[fullScreenStatus.bili? 'fullscreen' : '']">
+        <bili ref="bili"></bili>
+        <div class="resize">
+          <span  :class="['iconfont', fullScreenStatus.bili ? 'icon-quanpingsuoxiao' : 'icon-fullScreen']" @click="changSize('bili')"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

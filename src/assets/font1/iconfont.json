@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5698509",
+      "name": "全屏缩小",
+      "font_class": "quanpingsuoxiao",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "15138180",
+      "name": "退出全屏",
+      "font_class": "tuichuquanping",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "16239788",
+      "name": "全屏切换",
+      "font_class": "quanpingqiehuan",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "19657959",
+      "name": "屏幕_全屏",
+      "font_class": "fullScreen",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}
