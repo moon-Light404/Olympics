@@ -1,4 +1,5 @@
 # olympic
+这个项目还是有些太简单了
 
 ## Project setup
 ```
