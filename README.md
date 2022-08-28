@@ -23,3 +23,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+![](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo@master/img/20220828143128.png)
+
+![](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo@master/img/20220828143217.png)
+
+![](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo@master/img/20220828143551.png)
+
+![](https://cdn.jsdelivr.net/gh/moon-Light404/my_picgo@master/img/20220828143710.png)
